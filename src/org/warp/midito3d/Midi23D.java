@@ -72,7 +72,7 @@ public final class Midi23D implements DoneListener {
 							}
 							speed[channel] = frequency[channel] * 60d / (double)printer.getMotor(channel).getStepsPerMillimeter(); // mm/min
 							
-							if (didSomething == false) {
+							if (!didSomething) {
 								didSomething = speed[channel] > 0d;
 							}
 						}
@@ -81,7 +81,7 @@ public final class Midi23D implements DoneListener {
 					}
 					
 					songDuration+=deltaTime;
-					System.out.println(String.format("Chord: [%s] for %d deltas (%.2f seconds)", frequenciesString.substring(2), currentTick-lastTick, deltaTime));
+					System.out.printf("Chord: [%s] for %d deltas (%.2f seconds)%n", frequenciesString.substring(2), currentTick-lastTick, deltaTime);
 					
 					
 					if (didSomething) {
@@ -141,7 +141,7 @@ public final class Midi23D implements DoneListener {
 		}
 	}
 	
-	private static float SAMPLE_RATE = 8000f;
+	private static final float SAMPLE_RATE = 8000f;
 	@SuppressWarnings("unused")
 	private static void writeTone(int hz, int msecs) throws LineUnavailableException {
 		writeTone(hz, msecs, 0.5d);

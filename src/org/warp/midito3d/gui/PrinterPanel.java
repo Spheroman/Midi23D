@@ -23,6 +23,7 @@ import javax.swing.SwingConstants;
 
 import org.warp.midito3d.gui.printers.Model3Axes;
 import org.warp.midito3d.gui.printers.Model4Axes;
+import org.warp.midito3d.gui.printers.Model2Axes;
 import org.warp.midito3d.gui.printers.ModelZAxis;
 import org.warp.midito3d.gui.printers.PrinterModel;
 import org.warp.midito3d.gui.printers.PrinterModelArea;
@@ -69,7 +70,7 @@ public class PrinterPanel extends JPanel {
 		c.gridwidth = 5;
 		c.gridheight = 1;
 		this.add(modelText, c);
-		JComboBox<PrinterModel> modeList = new JComboBox<PrinterModel>(new PrinterModel[]{new ModelZAxis(), new Model3Axes(), new Model4Axes()});
+		JComboBox<PrinterModel> modeList = new JComboBox<PrinterModel>(new PrinterModel[]{new ModelZAxis(),new Model2Axes(), new Model3Axes(), new Model4Axes()});
 		modeList.setMinimumSize(new Dimension(130, 20));
 		modeList.setPreferredSize(new Dimension(130, 20));
 		c.insets = new Insets(0,5,2,3);

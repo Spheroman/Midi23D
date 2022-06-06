@@ -220,7 +220,7 @@ public class MainWindow extends JFrame {
 		ModernDialog.runLater(()->{
 			ModernDialog diag = new ModernDialog();
 			diag.setTitle("Save G-CODE File");
-			diag.setExtensions(new ModernExtensionFilter("G-CODE files", "*.gco", "*.gcode"), new ModernExtensionFilter("All files", "*.*"));
+			diag.setExtensions(new ModernExtensionFilter("G-CODE files",  "*.gcode"), new ModernExtensionFilter("All files", "*.*"));
 			File f = diag.showSaveDialog(this);
 			if (f != null) {
 				exportMidi(f);

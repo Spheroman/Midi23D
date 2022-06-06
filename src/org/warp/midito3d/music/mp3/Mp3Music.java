@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.sound.sampled.AudioInputStream;
 
+import org.warp.midito3d.music.DoneListener;
 import org.warp.midito3d.music.Music;
 import org.warp.midito3d.music.Note;
 
@@ -46,8 +47,9 @@ public class Mp3Music implements Music {
 		this.err.print("Not implemented function: setOutputChannelsCount("+i+")");
 	}
 
+
 	@Override
-	public void reanalyze() {
+	public void reanalyze(DoneListener i) {
 		try {
 
 //			if (mus.available()) {

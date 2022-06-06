@@ -35,6 +35,11 @@
 	    <artifactId>jsyn</artifactId>
 	    <version>20170328</version>
 	</dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-graphics</artifactId>
+          <version>17.0.0.1</version>
+      </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
