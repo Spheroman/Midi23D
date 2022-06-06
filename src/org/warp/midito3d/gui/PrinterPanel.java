@@ -204,10 +204,10 @@ public class PrinterPanel extends JPanel {
 			p.setLayout(new GridBagLayout());
 			p.setBackground(new Color(0,0,0,0));
 
-			JLabel motLabel = new JLabel(model.getMotorName(i));
+			JLabel motLabel = new JLabel(model.getMotorName(i)+ " steps per mm");
 			motLabel.setVerticalAlignment(SwingConstants.CENTER);
-			motLabel.setMinimumSize(new Dimension(50,20));
-			motLabel.setPreferredSize(new Dimension(50,20));
+			motLabel.setMinimumSize(new Dimension(150,20));
+			motLabel.setPreferredSize(new Dimension(150,20));
 			motLabel.setMaximumSize(new Dimension(9999,20));
 			c.insets = new Insets(0,5,0,3);
 			c.fill = GridBagConstraints.BOTH;

@@ -3,9 +3,9 @@ package org.warp.midito3d.gui.printers;
 import org.warp.midito3d.printers.Motor;
 
 public class MotorSetting {
-	public int ppi;
+	public double ppi;
 
-	public MotorSetting(int ppi) {
+	public MotorSetting(double ppi) {
 		this.ppi = ppi;
 	}
 	

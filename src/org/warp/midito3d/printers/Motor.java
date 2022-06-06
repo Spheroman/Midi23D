@@ -1,13 +1,13 @@
 package org.warp.midito3d.printers;
 
 public class Motor {
-	private final int stepsPerMillimeter;
+	private final double stepsPerMillimeter;
 	
-	public Motor(int stepsPerMillimeter) {
+	public Motor(double stepsPerMillimeter) {
 		this.stepsPerMillimeter = stepsPerMillimeter;
 	}
 	
-	public int getStepsPerMillimeter() {
+	public double getStepsPerMillimeter() {
 		return stepsPerMillimeter;
 	}
 }

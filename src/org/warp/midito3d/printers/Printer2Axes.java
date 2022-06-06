@@ -62,8 +62,7 @@ public class Printer2Axes implements Printer{
             }
         }
 
-        po.writeLine(String.format(Locale.US, "G01 F%.10f", speedPart));
-        po.writeLine(String.format(Locale.US, "G01 F%.10f X%.10f Y%.10f", speedPart, motorsPosition[0], motorsPosition[1]));
+        po.writeLine(String.format(Locale.US, "G01 X%.10f Y%.10f F%.10f", motorsPosition[0], motorsPosition[1], speedPart));
     }
 
     @Override

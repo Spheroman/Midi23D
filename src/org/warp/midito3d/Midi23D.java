@@ -90,8 +90,8 @@ public final class Midi23D implements DoneListener {
 						for (int i = 0; i < motorsCount; i++) {
 							speed[i] = 3d * 60d / (double)printer.getMotor(i).getStepsPerMillimeter();
 						}
-						printer.move(output, deltaTime, speed);
-//						printer.wait(output, deltaTime*1000);
+//						printer.move(output, deltaTime, speed);
+						printer.wait(output, deltaTime*1000);
 					}	
 				}
 				lastTick = currentTick;
